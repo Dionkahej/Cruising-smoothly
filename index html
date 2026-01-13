@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cruising Smoothly — Nicecream Truck | Weligama, Sri Lanka</title>
+  <meta name="description" content="Cruising Smoothly Nicecream Truck — fresh, local flavours in Weligama, Sri Lanka. See menu, flavours and where to find us." />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="" crossorigin=""/>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="images/favicon.png" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand">Cruising Smoothly</h1>
+      <p class="tagline">Nicecream truck — Weligama, Sri Lanka</p>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#menu">Menu</a>
+        <a href="#flavours">Flavours</a>
+        <a href="#where">Where to find us</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h2>Fresh. Local. Coconut-based & Traditional</h2>
+          <p>Handmade nicecream using fresh Sri Lankan fruit, coconut milk and local flavours. Vegan options available.</p>
+          <a class="btn" href="#menu">See Menu</a>
+        </div>
+        <div class="hero-image">
+          <!-- Replace with your truck photo: images/truck.jpg -->
+          <img src="images/truck-placeholder.jpg" alt="Cruising Smoothly Nicecream Truck in Weligama" />
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="container section menu-section">
+      <h2>Menu</h2>
+      <p class="muted">All prices in LKR. Add toppings for +50 LKR each.</p>
+
+      <div class="menu-grid">
+        <div class="menu-card">
+          <h3>Classic Scoop</h3>
+          <ul>
+            <li>Single scoop — 300</li>
+            <li>Double scoop — 500</li>
+          </ul>
+        </div>
+
+        <div class="menu-card">
+          <h3>Vegan Coconut Nicecream</h3>
+          <ul>
+            <li>Single scoop — 350</li>
+            <li>Double scoop — 600</li>
+          </ul>
+        </div>
+
+        <div class="menu-card">
+          <h3>Sundaes & Treats</h3>
+          <ul>
+            <li>Classic Sundae — 650</li>
+            <li>Waffle + Nicecream — 900</li>
+            <li>Milkshake (blended) — 700</li>
+          </ul>
+        </div>
+
+        <div class="menu-card">
+          <h3>Family Packs</h3>
+          <ul>
+            <li>Family tub (1 litre) — 2200</li>
+            <li>Party pack (5 litres) — 9500 (pre-order)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="menu-actions">
+        <button id="download-menu" class="btn outline">Download Menu (PDF)</button>
+        <a class="btn" href="#where">Find the Truck</a>
+      </div>
+    </section>
+
+    <section id="flavours" class="container section flavours-section">
+      <h2>Flavours</h2>
+      <p class="muted">Rotating seasonal flavours — here are our staples.</p>
+
+      <div id="flavours-list" class="flavours-grid" aria-live="polite">
+        <!-- Populated by JS -->
+      </div>
+
+      <div class="toppings">
+        <h3>Toppings (50 LKR each)</h3>
+        <ul>
+          <li>Roasted coconut</li>
+          <li>Caramelised banana</li>
+          <li>Chocolate sauce</li>
+          <li>Cashew crunch</li>
+          <li>Fresh passionfruit</li>
+          <li>Local honey</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="where" class="container section where-section">
+      <h2>Where to find us</h2>
+      <p class="muted">Weekly schedule — follow our socials for live updates.</p>
+
+      <div class="where-grid">
+        <div class="schedule">
+          <h3>Weekly Schedule</h3>
+          <ul id="schedule-list">
+            <!-- Populated by JS -->
+          </ul>
+          <p class="muted">Times are approximate — arrive early for best selection.</p>
+        </div>
+
+        <div class="map-wrap" aria-label="Map showing truck locations">
+          <div id="map"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="container section contact-section">
+      <h2>Contact & Bookings</h2>
+      <p>Email: <a href="mailto:hello@cruisingsmoothly.lk">hello@cruisingsmoothly.lk</a> — Phone/WhatsApp: +94 77 123 4567</p>
+
+      <form id="booking-form" class="booking-form" action="mailto:hello@cruisingsmoothly.lk" method="GET" enctype="text/plain">
+        <label>
+          Name
+          <input required type="text" name="name" />
+        </label>
+        <label>
+          Event date / preferred location
+          <input required type="text" name="event" placeholder="e.g. 2026-02-10 — Weligama Beach" />
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="4"></textarea>
+        </label>
+        <button type="submit" class="btn">Send Booking Request</button>
+      </form>
+
+      <div class="socials">
+        <p>Follow us:</p>
+        <a href="#" aria-label="Instagram">Instagram</a> · <a href="#" aria-label="Facebook">Facebook</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© Cruising Smoothly — Nicecream Truck. Based in Weligama, Sri Lanka.</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="" crossorigin=""></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
